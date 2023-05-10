@@ -29,6 +29,7 @@ This repository consists of the following files:
 - DLFinalProject_Image_Generation_GAN.ipynb: This notebook contains the code to generate surgical images that were further used to enhance the dataset. 
 - DLFinalProject_Recolorization.ipynb: This notebook contains the code to train the recolorization models based on UNet, DeepLabV3, and FCN.
 - DLFinalProject_Recolorization_with_GAN_images.ipynb: This notebook contains the code to train recolorization models based on the GAN generated images.
+- DLFinalProject_Metrics_Final.ipynb: This notebook contains the code to evaluate the segmentation performance of trained models.
 
 
 
