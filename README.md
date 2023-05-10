@@ -2,8 +2,18 @@
 
 Surgical site segmentation is a crucial part of training autonomous robots designed to perform medical procedures. Here we present some supervised methods of performing robot tool image segmentation, and an unsupervised method of generating surgical images using a GAN which could be used for further training.
 
+## Dataset Specs
 We used the [CholecSeg8k](https://www.kaggle.com/datasets/newslab/cholecseg8k) dataset consisting of images of cholecystectomy procedures with their corresponding masks. We trained three state of the art models - the UNet, and 2 models with a Resnet backbone: DeepLabV3 and FCN to segment the images  using Cross Entropy Loss and the Adam Optimizer. We chose the Dice Score metric to evaluate our models. 
 
+Description: The dataset has the following specifications:
+
+A subset of Cholec80, where videos captured the procedure at 25 fps and annotated tools presence and operation phases
+13 different object (classes) including black background, abdominal wall, liver, gastrointestinal tract, fat, grasper, connective tissue, blood, cystic duct, L hook electrocautery (Instrument), gallbladder, hepatic vein, and liver ligament (see Data Preprocessing for visualization)
+3 masks --> 1 color mask, one mask used by annotation tool, and one watershed mask
+Images are in RGB
+Directories are such that each contains 80 consecutive frames of the video with a resolution of 854x480 and the annotated semantic segmentation masks
+
+## Description of Process
 For each model, we ran multiple experiemnts in this order to evalaute their performance on Segmentation. These experiements were as follows:
 
 - Retraining all parameters of the model: Herein, we either defined the model ourselves(UNet) or imported the model from pytorch without any pre-traiend weight and trained the model to segment the dataset.
@@ -20,6 +30,7 @@ In addition, we implemeted a Wavelet Transformation to enhance our UNet model to
 
 Lastly, we trained  a GAN architecture to generate surgical images using the Adam optimizer, and Binary Cross Entropy Loss. 
 
+## Files
 This repository consists of the following files:
 
 - DLFinalProject_UNet_Final.ipynb: This notebook contains all experiments related to UNet with the corresponding Training and Validation Loss plots. 
