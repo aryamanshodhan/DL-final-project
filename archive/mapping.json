@@ -1,0 +1,15 @@
+{
+  "Black_Background": 50,
+  "Abdominal_Wall": 11,
+  "Liver": 21,
+  "Gastrointestinal_Tract": 13,
+  "Fat": 12,
+  "Grasper": 31,
+  "Connective_Tissue": 23,
+  "Blood": 24,
+  "Cystic_Duct": 25,
+  "L-hook_Electrocautery": 32,
+  "Gallbladder": 22,
+  "Hepatic_Vein": 33,
+  "Liver_Ligament": 5
+}
